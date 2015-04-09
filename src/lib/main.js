@@ -3,9 +3,14 @@
  */
 require.config({
     baseUrl: "lib",
-    shim: [
-
-    ]
+    paths: {
+        'jQuery': 'jquery211'
+    },
+    shim: {
+        'jQuery':{
+            exports: '$'
+        }
+    }
 });
 
 require(['counter'], function() {
