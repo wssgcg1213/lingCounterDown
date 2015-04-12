@@ -56,7 +56,7 @@ define(['jQuery'], function($) {
          */
         function getNumFunc(start, top, step, isLoop){
             top = top || start;
-            var num = start;
+            var num = start + step;
             return function(next){
                 if(next) num -= step;
                 if(num < 0){

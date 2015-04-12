@@ -1,2 +1,2 @@
-/*! Ling 09-04-2015 */
+/*! Ling 12-04-2015 */
 require.config({baseUrl:"lib",paths:{jQuery:"jquery211"},shim:{jQuery:{exports:"$"}}}),require(["counter"],function(){var a,b,c,d,e="2015-05-16 10:00:00",f=parseInt(new Date(e).getTime())/1e3,g=parseInt((new Date).getTime()/1e3),h=f-g;0>=h?a=b=c=d=0:(a=parseInt(h/86400),b=parseInt((h-86400*a)/3600),c=parseInt((h-86400*a-3600*b)/60),d=parseInt(h-86400*a-3600*b-60*c),$("#sec").counter({counter:d,intval:1,loop:!0,top:60,firstIntval:1}),$("#minute").counter({counter:c,intval:60,loop:!0,top:60,firstIntval:d}),$("#hour").counter({counter:b,intval:3600,loop:!0,top:24,firstIntval:60*c+d}),$("#day").counter({counter:a,intval:86400,loop:!1,firstIntval:3600*b+60*c+d})),console.log("all modules loaded!")});
